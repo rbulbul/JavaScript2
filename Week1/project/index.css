@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffa500;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#quote-box {
+  border-radius: 3px;
+  margin: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.quote-text {
+  text-align: center;
+  width: 720px;
+  height: auto;
+  padding: 0 25px;
+  color: #ffa500;
+  padding-top: 3vh;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.quote-text i {
+  font-size: 1em;
+  margin-right: 0.4em;
+}
+
+.quote-author {
+  width: 720px;
+  height: auto;
+  color: #ffa500;
+  padding-top: 20px;
+  padding-right: 45px;
+  font-size: 0.8em;
+  text-align: right;
+}
+
+.buttons {
+  width: 635px;
+  padding-bottom: 4vh;
+  margin: auto;
+  /*   display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(auto);
+}
+
+.button {
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #ffa500;
+  outline: none;
+  font-size: 1em;
+  padding: 8px 10px 6px 10px;
+  margin-top: 30px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+#tweet-quote {
+  grid-column: 1/2;
+  grid-row: 1;
+}
+
+#tweet-quote,
+#tumblr-quote {
+  padding-top: 8px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#new-quote {
+  grid-column: 11/13;
+  grid-row: 1;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.footer {
+  width: 15vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #fff;
+}
+
+.footer a {
+  font-weight: 500;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #ffa500;
+}

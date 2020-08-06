@@ -1,1 +1,49 @@
 <!-- Your code goes in here -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Random Quote Generator</title>
+  </head>
+  <body>
+    <div>
+      <div id="quote-box">
+        <div class="quote-text">
+          <i class="fa fa-quote-left"></i><span id="text">here there will be quote!</span>
+        </div>
+        <div class="quote-author"><span id="author">- the author name</span></div>
+        <div class="buttons">
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            class="button"
+            id="tweet-quote"
+            title="Tweet this quote!"
+          >
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.tumblr.com/"
+            target="_blank"
+            class="button"
+            id="tumblr-quote"
+            title="Post this quote!"
+          >
+            <i class="fa fa-tumblr"></i>
+          </a>
+          <button class="button" id="new-quote">New quote</button>
+        </div>
+      </div>
+      <div class="footer">
+        <a href="https://www.linkedin.com/in/rbulbul/" target="_blank"> &copy; 2020 by rbulbul</a>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
