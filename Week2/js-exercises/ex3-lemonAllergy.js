@@ -1,7 +1,7 @@
 /**
- 
+
  ** Exercise 3: Lemon allergy **
- 
+
   Your mom bought you a basket of fruit, because you 're doing so well in HackYourFuture. How sweet of her!
   However, she forgot that you are allergic to lemons!Let 's quickly dispose of them before you get an attack.
 
@@ -11,9 +11,12 @@
 
  */
 
+'use strict';
 
 function takeOutLemons(basket) {
-  // your code goes in here. The output is a string 
+  // your code goes in here. The output is a string
+  const myFavoriteFruit = basket.filter(element => element !== 'Lemon');
+  return `My mom bought me a fruit basket, containing "${myFavoriteFruit}"`;
 }
 
 const fruitBasket = ['Apple', 'Lemon', 'Grapefruit', 'Lemon', 'Banana', 'Watermelon', 'Lemon'];

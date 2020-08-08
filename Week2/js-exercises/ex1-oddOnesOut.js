@@ -1,12 +1,14 @@
-/**
+/*
 
- ** Exercise 1: The odd ones out **
+** Exercise 1: The odd ones out **
 
- Rewrite the following function using map and filter. 
+ Rewrite the following function using map and filter.
  Avoid using for loop or forEach.
  The function should still behave the same.
 
- */
+=================================================
+== Rewrite version of this expression is below ==
+=================================================
 function doubleEvenNumbers(numbers) {
   const newNumbers = [];
   for (let i = 0; i < numbers.length; i++) {
@@ -15,7 +17,20 @@ function doubleEvenNumbers(numbers) {
     }
   }
   return newNumbers;
-}
 
 const myNumbers = [1, 2, 3, 4];
 console.log(doubleEvenNumbers(myNumbers)); // Logs "[4, 8]" to the console
+};
+=================================================
+*/
+
+'use strict';
+
+const myNumbers = [1, 2, 3, 4];
+// 1. We can either do like this,
+// const filteredNum = myNumbers.filter(number => number % 2 === 0);
+// const doubleEvenNumbers = filteredNum.map(num => num * 2);
+
+// or just like this. Here we use them together.
+const doubleEvenNumbers = myNumbers.filter(num => num % 2 === 0).map(number => number * 2);
+console.log(doubleEvenNumbers);

@@ -1,7 +1,7 @@
 /**
- 
+
  ** Exercise 2: What 's your Monday worth? **
- 
+
  Write a function that finds out what your hourly rate on a Monday would be
  Use the map array function to take out the duration time for each task.
  Avoid using for loop or forEach.
@@ -11,12 +11,18 @@
 
  */
 
+'use strict';
 
 function dayWorth(tasks, hourlyRate) {
   // put your code in here, the function does returns a euro formatted string
+  const durationKey = tasks.filter(item => item.duration);
+  const time = durationKey.map(item => (item.duration / 60) * hourlyRate);
+  const total = time.reduce((accumulator, currentValue) => accumulator + currentValue);
+  return `Total: €${total}`;
 }
 
-const mondayTasks = [{
+const mondayTasks = [
+  {
     name: 'Daily standup',
     duration: 30, // specified in minutes
   },
@@ -34,5 +40,5 @@ const mondayTasks = [{
   },
 ];
 
-console.log(dayWorth(mondayTasks, 25))
-console.log(dayWorth(mondayTasks, 13.37))
+console.log(dayWorth(mondayTasks, 25));
+console.log(dayWorth(mondayTasks, 13.37));
