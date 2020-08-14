@@ -4,11 +4,10 @@
 // 2. A user can specify how many minutes the timer should be set,
 // and with a click on the play button it starts counting down!
 // 3. If the user wants to pause the timer, they can do so by clicking the pause button.
-// 4. It should look like this:
-// 5. If the timer is running, the user can't change the session length anymore
-// 6. Use at least 3 functions
-// 7. Display minutes and seconds
-// 8. If the timer finishes the timer should be replaced by the message: Time's up!
+// 4. If the timer is running, the user can't change the session length anymore
+// 5. Use at least 3 functions
+// 6. Display minutes and seconds
+// 7. If the timer finishes the timer should be replaced by the message: Time's up!
 
 // DOM elements
 const decreaseBtn = document.getElementById('decrease');
@@ -18,19 +17,19 @@ const timeLeft = document.querySelector('.time-left');
 const startBtn = document.querySelector('.play');
 const pauseBtn = document.querySelector('.pause');
 
-decreaseBtn.addEventListener('click', () => {
+increaseBtn.addEventListener('click', () => {
   const currentTime = parseFloat(setTime.textContent);
-  setTime.textContent = currentTime - 1;
+  setTime.textContent = currentTime + 1;
   const getSecond = (currentTime * 60) % 60;
-  const getMinute = currentTime - 1;
+  const getMinute = currentTime + 1;
   timeLeft.innerHTML = `${getMinute.toString().padStart('2', 0)}: ${getSecond
     .toString()
     .padStart('2', 0)}`;
 });
 
-increaseBtn.addEventListener('click', () => {
+decreaseBtn.addEventListener('click', () => {
   const currentTime = parseFloat(setTime.textContent);
-  setTime.textContent = currentTime + 1;
+  setTime.textContent = currentTime - 1;
   const getSecond = (currentTime * 60) % 60;
   const getMinute = currentTime - 1;
   timeLeft.innerHTML = `${getMinute.toString().padStart('2', 0)}: ${getSecond
