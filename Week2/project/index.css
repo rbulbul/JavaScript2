@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e555c;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  height: 50vh;
+}
+
+#app {
+  margin: auto 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.session {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  font-family: 'Righteous', cursive;
+}
+.control {
+  cursor: pointer;
+}
+
+.pomodoro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+  margin: 20px auto;
+  padding: 0.5em;
+  border-radius: 50px;
+  border: 5px #14363a solid;
+  font-size: 3rem;
+}
+
+.status {
+  font-size: 2rem;
+  font-family: 'Righteous', cursive;
+}
+.time-left {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.buttons {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.play,
+.pause {
+  font-size: 1.5em;
+  margin: 0 10px;
+  cursor: pointer;
+}

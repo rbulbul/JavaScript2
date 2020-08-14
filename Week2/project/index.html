@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pomodoro Clock</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pomodoro Clock</title>
-</head>
-
-<body>
-  <div id="app">
-
-  </div>
-  <script src="index.js"></script>
-</body>
-
+  <body>
+    <div id="app">
+      <div class="title">Pomodoro Clock</div>
+      <div class="setting">
+        <div class="session">
+          <div class="description">Session Length</div>
+          <div class="value">
+            <span id="increase" class="control "><i class="fa fa-arrow-up"></i></span>
+            <span id="set-time">25</span>
+            <span id="decrease" class="control "><i class="fa fa-arrow-down"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="pomodoro">
+        <div class="status">Session</div>
+        <div class="time-left">25:00</div>
+      </div>
+      <div class="buttons">
+        <span class="play"><i class="fa fa-play"></i></span>
+        <span class="pause"><i class="fa fa-pause"></i></span>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
