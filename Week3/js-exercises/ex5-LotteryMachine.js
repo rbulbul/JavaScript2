@@ -1,7 +1,7 @@
 /**
- 
+
  ** Exercise 5: The lottery machine **
- 
+
 Don't you just love the thrill of the lottery? What if I told you we can make our own lottery machine? Let'
  s get started!
 
@@ -29,8 +29,31 @@ Don't you just love the thrill of the lottery? What if I told you we can make ou
 function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
   const numbers = [];
   // make array
+  for (let i = startIndex; i <= stopIndex; i++) {
+    numbers.push(i);
+  }
+  console.log(numbers);
+  for (const number of numbers) {
+    threeCallback(number);
+    fiveCallback(number);
+  }
+
   // start at beginning of array and check if you should call threeCallback or fiveCallback or go on to next
 }
+
+const sayThree = number => {
+  if (number % 3 === 0) {
+    console.log(`${number} is divisible by 3`);
+    console.log('You called sayFive');
+  }
+};
+
+const sayFive = number => {
+  if (number % 5 === 0) {
+    console.log(`${number} is divisible by 5`);
+    console.log(`You called sayFive`);
+  }
+};
 
 threeFive(10, 15, sayThree, sayFive);
 
