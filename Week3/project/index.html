@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Tip Calculator</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tip Calculator</title>
-</head>
+  <body>
+    <div id="app">
+      <h2 class="title">TIP CALCULATOR</h2>
+      <form id="form">
+        <p>How much was your bill?</p>
+        <p>$ <input id="price" type="text" placeholder="Bill Amount" /></p>
 
-<body>
-  <div id="app"></div>
-  <script src="index.js"></script>
-</body>
-
+        <label for="options"
+          >How was your service? <br />
+          <select name="options" id="options">
+            <option value="">-- Choose an Option --</option>
+            <option value="0.3">30% - Outstanding</option>
+            <option value="0.2">20% - Good</option>
+            <option value="0.15">15% - It was OK</option>
+            <option value="0.1">10% - Bad</option>
+            <option value="0.05">5% - Terrible</option>
+          </select>
+        </label>
+        <label for="people"
+          >How many people are sharing the bill? <br />
+          <input id="people" type="number" placeholder="Number of People" /> <span>people</span>
+        </label>
+        <label for="btn"><button id="btnCalculate" type="button">CALCULATE!</button></label>
+        <div id="info">
+          <h4>TIP AMOUNT</h4>
+          <p>$ <span id="priceOutput"></span></p>
+          <p id="infoEach"></p>
+        </div>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
